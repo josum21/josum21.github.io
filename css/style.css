@@ -203,7 +203,7 @@ a:hover { text-decoration: underline; }
 /* ---------- Talk links ---------- */
 .entry-head-meta { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; }
 #talks .entry-head { align-items: center; gap: 10px; }
-#talks .entry-head h3 { flex: 1 1 auto; min-width: 0; }
+#talks .entry-head h3 { flex: 1 1 auto; min-width: 0; font-size: 17px; line-height: 1.4; }
 .talk-link {
   display: inline-flex; align-items: center; justify-content: center;
   width: 30px; height: 30px; border-radius: 8px;
@@ -216,6 +216,8 @@ a:hover { text-decoration: underline; }
   transform: translateY(-1px); text-decoration: none;
 }
 .talk-link svg { width: 15px; height: 15px; }
+.entry-thesis { display: flex; align-items: center; gap: 10px; }
+.entry-thesis span { min-width: 0; }
 
 /* ---------- Publications ---------- */
 .pub-list { margin: 0; padding-left: 22px; display: grid; gap: 12px; }
