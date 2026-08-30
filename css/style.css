@@ -200,6 +200,18 @@ a:hover { text-decoration: underline; }
 .edu-logo img { height: 30px; width: auto; object-fit: contain; display: block; }
 .edu-logo--dark { background: #16233f; }
 
+/* ---------- Talk links ---------- */
+.entry-head-meta { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.talk-link {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--bg-elevated);
+  color: var(--text-muted); flex-shrink: 0;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.talk-link:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+.talk-link svg { width: 14px; height: 14px; }
+
 /* ---------- Publications ---------- */
 .pub-list { margin: 0; padding-left: 22px; display: grid; gap: 12px; }
 .pub-list li { padding-left: 4px; }
