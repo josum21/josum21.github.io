@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact · Zuchen Huang · 黄祖琛</title>
+  <meta name="description" content="Contact Zuchen Huang (黄祖琛).">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Back to home">ZH</a>
+      <a class="btn btn-outline" href="index.html">← Back</a>
+      <button class="theme-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-15v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-15.6-1.4 1.4M6.3 17.7l-1.4 1.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section contact-page">
+      <div class="container contact-narrow">
+        <div class="section-head">
+          <span class="section-tag">联系我</span>
+          <h2>Get in touch</h2>
+        </div>
+        <p class="contact-lead">Leave a message and I'll get back to you. Your details are sent directly to my inbox.</p>
+
+        <div id="form-status" class="form-status" hidden></div>
+
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New message from personal site">
+          <input type="hidden" name="redirect" value="https://josum21.github.io/contact.html?sent=1">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Your message"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© 2026 Zuchen Huang · 黄祖琛</p></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var status = document.getElementById('form-status');
+      if (new URLSearchParams(location.search).get('sent') === '1') {
+        status.hidden = false;
+        status.textContent = 'Thanks! Your message has been sent.';
+        status.classList.add('success');
+      }
+    })();
+  </script>
+</body>
+</html>

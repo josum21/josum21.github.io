@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+*.log
+.dsh/storages/
+
+# Privacy: CV files stay local only, never committed
+CV_ZuchenHuang.docx
+CV_ZuchenHuang.pdf
