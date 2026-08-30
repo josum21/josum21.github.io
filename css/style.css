@@ -188,6 +188,18 @@ a:hover { text-decoration: underline; }
 .entry-desc { margin: 4px 0 0; padding-left: 18px; }
 .entry-desc li { margin-bottom: 4px; }
 
+/* ---------- Education logos ---------- */
+.entry-edu .entry-head { align-items: center; gap: 14px; }
+.entry-title { flex: 1; min-width: 0; }
+.entry-edu .entry-sub { margin: 2px 0 0; }
+.edu-logo {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 48px; padding: 0 14px; flex-shrink: 0;
+  background: #ffffff; border: 1px solid var(--border); border-radius: 10px;
+}
+.edu-logo img { height: 30px; width: auto; object-fit: contain; display: block; }
+.edu-logo--dark { background: #16233f; }
+
 /* ---------- Publications ---------- */
 .pub-list { margin: 0; padding-left: 22px; display: grid; gap: 12px; }
 .pub-list li { padding-left: 4px; }
